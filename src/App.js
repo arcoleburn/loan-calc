@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import {
@@ -6,10 +6,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import ShortCalc from './Components/ShortCalc';
 import { useState } from 'react';
-import ResultsPanel from './Components/ResultsPanel';
-import { CalcWrapper } from './app.styles';
 import { GlobalStyle } from './globalStyles';
 import { Header } from './Components/Header';
 import { LoanCalc } from './Components/LoanCalc';
