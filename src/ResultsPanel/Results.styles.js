@@ -4,7 +4,11 @@ export const ResultsWrapper = styled.div`
   width: 70%;
   max-width: 300px;
   margin: 35px;
-
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: var(--lgShadow) 5px 5px 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 
@@ -15,7 +19,7 @@ export const ResultsWrapper = styled.div`
     margin: 0;
     p {
       margin: 0;
-      font-size: 12px;
+      font-size: var(--fontTiny);
     }
     .detail {
       font-size: 2em;

@@ -2,20 +2,18 @@
 
 const results = (principle, interestRate, length) => {
   
-  const dailyInterest = (interestRate)/100/365
-  console.log('daily int', dailyInterest)
+  const dailyInterest = Number(interestRate)/100/365
+
   
   const totalInterest =
-    Number(principle) * dailyInterest* (Number(length) * 30.4167);
+    principle * dailyInterest* (length * 30.4167);
 
-    console.log('total interest', totalInterest)
-  const totalCost =Number(principle) + totalInterest
-  console.log('totcost', totalCost)
-console.log('payments', totalCost/(Number(length)))
+  const totalCost =principle + totalInterest
+
     return {
-    totalCost:(Number(principle)+ totalInterest).toFixed(2),
+    totalCost:(principle + totalInterest).toFixed(2),
     interest: totalInterest.toFixed(2),
-    monthlyPayment: (totalCost/Number(length)).toFixed(2),
+    monthlyPayment: (totalCost/length).toFixed(2),
   };
 };
 
