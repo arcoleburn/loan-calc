@@ -2,7 +2,7 @@
 
 const results = (principle, interestRate, length) => {
   
-  const dailyInterest = Number(interestRate)/100/365
+  const dailyInterest = (interestRate)/100/365
   console.log('daily int', dailyInterest)
   
   const totalInterest =

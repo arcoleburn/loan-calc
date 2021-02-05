@@ -14,34 +14,47 @@ const ShortCalc = (props) => {
   return (
     <CalcForm>
       <label htmlFor="principle">Loan Amount</label>
-      <span className="input-dollar">$
+      <span className="input-dollar">
+        $
         <input
           type="number"
           id="principle"
           name="principle"
           placeholder="5000"
-          onChange={(e) => setPrinciple(e.target.value)}
+          onChange={(e) => setPrinciple(Number(e.target.value))}
         />
       </span>
       <label>Loan Term Length</label>
-      
-      <input type='range' min='3' max ='6' step='1' list='sliderpts' onChange={(e)=>setLoanTerm(e.target.value)} />
-      <datalist id='sliderpts'>
-        <option value="3" label ='3 mo'></option>
-        <option value="4"label ='4 mo'></option>
-        <option value="5" label = '5 mo'></option>
-        <option value="6" label = '6 mo'></option>
+
+      <input
+        type="range"
+        min="3"
+        max="6"
+        step="1"
+        list="sliderpts"
+        onChange={(e) => setLoanTerm(Number(e.target.value))}
+      />
+      <datalist id="sliderpts">
+        <option value="3" label="3 mo"></option>
+        <option value="4" label="4 mo"></option>
+        <option value="5" label="5 mo"></option>
+        <option value="6" label="6 mo"></option>
       </datalist>
-      
-    
-      <label htmlFor="rate">APR</label>
-      <span className= 'input-percent'><input
-        type="number"
-        onChange={(e) => setRate(e.target.value)}
-        name="principle"
-        placeholder="175"
-      />%</span>
-      <button onClick={(e) => handleSubmit(e)}>Go!</button>
+
+        <div className="rate-input">
+          <label htmlFor="rate">APR</label>
+          <span className="input-percent">
+            <input
+              type="number"
+              onChange={(e) => setRate(Number(e.target.value))}
+              name="principle"
+              placeholder="175"
+            />
+            %
+          </span>
+        </div>
+        <button onClick={(e) => handleSubmit(e)}>Go!</button>
+     
     </CalcForm>
   );
 };

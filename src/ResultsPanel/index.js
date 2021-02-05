@@ -1,15 +1,24 @@
+import { ResultsWrapper } from "./Results.styles";
+
 const ResultsPanel = (props) => {
   const { loanDetails } = props;
 
   return (
-    <>
-      <p>Your Total Cost</p>
-      <p>${loanDetails.totalCost}</p>
-      <p>Total Interest and Fees</p>
-      <p>${loanDetails.interest}</p>
-      <p>Monthly Payment</p>
-      <p>${loanDetails.monthlyPayment}</p>
-    </>
+    <ResultsWrapper>
+      <div className="payment">
+        <p>Monthly Payment</p>
+        <p className='detail'>${loanDetails.monthlyPayment}</p>
+      </div>
+
+      <div className="interest">
+        <p>Total Interest and Fees</p>
+        <p className='detail'>${loanDetails.interest}</p>
+      </div>
+      <div className="total">
+        <p>Your Total Cost</p>
+        <p className='detail'>${loanDetails.totalCost}</p>
+      </div>
+    </ResultsWrapper>
   );
 };
 
