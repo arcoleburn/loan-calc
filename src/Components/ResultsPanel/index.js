@@ -11,11 +11,11 @@ const ResultsPanel = (props) => {
       </div>
 
       <div className="interest">
-        <p>Total Interest and Fees</p>
+        <p>Interest and Fees: </p>
         <p className='detail'>${loanDetails.interest}</p>
       </div>
       <div className="total">
-        <p>Your Total Cost</p>
+        <p>Your Total Cost: </p>
         <p className='detail'>${loanDetails.totalCost}</p>
       </div>
     </ResultsWrapper>

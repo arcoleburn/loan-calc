@@ -3,17 +3,22 @@ import styled from 'styled-components';
 export const CalcForm = styled.form`
   display: flex;
   flex-direction: column;
-background-color: white;
+  background-color: white;
   width: 70%;
   max-width: 300px;
+  min-width: 248px;
   margin: 35px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 6px;
   box-shadow: var(--lgShadow) 5px 5px 10px;
 
+  font-size: var(--fontMed);
+
   input{
     border-radius: 6px;
+    margin: 3px;
+    font-size: var(--fontSmall);
   }
 
   input[type=range]{
@@ -41,6 +46,7 @@ background-color: white;
     font-family: 'Merriweather Sans';
     color: white;
     
+    margin-top: 10px;
     
     border-radius: 6px;
     border: var(--orange);

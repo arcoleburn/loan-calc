@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const ResultsWrapper = styled.div`
   width: 70%;
   max-width: 300px;
+  
+  min-width: 217px;
   margin: 35px;
   border: 1px solid black;
   background-color: white;

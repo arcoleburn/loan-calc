@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
-import {BrowserRouter as Router} from 'react-router-dom'
-import ShortCalc from './ShortCalc';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import ShortCalc from './Components/ShortCalc';
 import { useState } from 'react';
-import ResultsPanel from './ResultsPanel';
+import ResultsPanel from './Components/ResultsPanel';
 import { CalcWrapper } from './app.styles';
-import {GlobalStyle} from './globalStyles'
-import { Header } from './Header';
+import { GlobalStyle } from './globalStyles';
+import { Header } from './Components/Header';
+import { LoanCalc } from './Components/LoanCalc';
 
 function App() {
   const [loanDetails, setLoanDetails] = useState({
@@ -18,12 +23,43 @@ function App() {
 
   return (
     <Router>
-    <GlobalStyle/>
-    <Header/>
-    <CalcWrapper>
-      <ShortCalc setLoanDetails={setLoanDetails} />
-      <ResultsPanel loanDetails={loanDetails} />
-    </CalcWrapper>
+      <GlobalStyle />
+      <Header />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={(props) => (
+            <LoanCalc
+              {...props}
+              setLoanDetails={setLoanDetails}
+              loanDetails={loanDetails}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/calculator"
+          component={(props) => (
+            <LoanCalc
+              {...props}
+              setLoanDetails={setLoanDetails}
+              loanDetails={loanDetails}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/reverse"
+          component={(props) => <LoanCalc {...props} />}
+        />
+        <Route
+          exact
+          path="/about"
+          component={(props) => <LoanCalc {...props} />}
+        />
+      </Switch>
+     
     </Router>
   );
 }
