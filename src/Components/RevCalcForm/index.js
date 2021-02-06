@@ -1,26 +1,30 @@
 import { useState } from 'react';
-import {results as formula} from '../helpers/calcHelpers';
-import { CalcForm } from './ShortCalc.styles';
-const ShortCalc = (props) => {
-  const [principle, setPrinciple] = useState(0);
-  const [loanTerm, setLoanTerm] = useState(0);
-  const [rate, setRate] = useState(0);
+import formula from '../helpers/calcHelpers';
+import { CalcForm } from '../ShortCalc/ShortCalc.styles';
+
+
+import {reverse} from '../helpers/calcHelpers'
+
+const RevCalcForm = (props) => {
+  const [loanTerm, setLoanTerm] = useState(6);
+  const [rate, setRate] = useState(175);
+  const[payment, setPayment] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.setLoanDetails(formula(principle, rate, loanTerm));
+    props.setLoanDetails(reverse(payment, rate, loanTerm));
   };
 
   return (
     <CalcForm>
-      <label htmlFor="principle">Loan Amount</label>
+      <label htmlFor="payment">Monthly Payment</label>
       <span className="input-dollar">
         $
         <input
           type="number"
-          id="principle"
-          name="principle"
-          onChange={(e) => setPrinciple(Number(e.target.value))}
+          id="payment"
+          name="payment"
+          onChange={(e) => setPayment(Number(e.target.value))}
         />
       </span>
       <label>Loan Term Length</label>
@@ -57,4 +61,4 @@ const ShortCalc = (props) => {
   );
 };
 
-export default ShortCalc;
+export default RevCalcForm;

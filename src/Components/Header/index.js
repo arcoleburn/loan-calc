@@ -11,8 +11,8 @@ export const Header = (props) => {
   <h1>Seedling</h1>
   </div>
   <NavLinks>
-    <Link to='/'>Loan Calculator</Link>
-    <Link to='/'>Reverse Calculator</Link>
+    <Link to='/calculator'>Loan Calculator</Link>
+    <Link to='/reverse'>Reverse Calculator</Link>
     <Link t0='/'>About</Link>
   </NavLinks>
   </HeaderWrapper>);

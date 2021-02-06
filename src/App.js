@@ -1,4 +1,3 @@
-
 import './App.css';
 
 import {
@@ -10,6 +9,7 @@ import { useState } from 'react';
 import { GlobalStyle } from './globalStyles';
 import { Header } from './Components/Header';
 import { LoanCalc } from './Components/LoanCalc';
+import { ReverseCalc } from './Components/ReverseCalc';
 
 function App() {
   const [loanDetails, setLoanDetails] = useState({
@@ -48,7 +48,13 @@ function App() {
         <Route
           exact
           path="/reverse"
-          component={(props) => <LoanCalc {...props} />}
+          component={(props) => (
+            <ReverseCalc
+              {...props}
+              setLoanDetails={setLoanDetails}
+              loanDetails={loanDetails}
+            />
+          )}
         />
         <Route
           exact
@@ -56,7 +62,6 @@ function App() {
           component={(props) => <LoanCalc {...props} />}
         />
       </Switch>
-     
     </Router>
   );
 }
