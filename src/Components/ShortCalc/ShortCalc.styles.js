@@ -68,7 +68,13 @@ export const CalcForm = styled.form`
     position: absolute;
   }
   
-  
+  .toolTip{
+    background-color:var(--greyBlue);
+    max-width: 400px;
+    border-radius: 6px;
+  }
+
+
   datalist{
     display: flex;
     justify-content: space-between
