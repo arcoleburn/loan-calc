@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
    color: var(--darkText);
    .emphasize{
      color:var(--orange);
-     font-size: var(--fontBig);
+     font-size: var(--fontSuperBig);
      font-weight: bold;
    }
  }

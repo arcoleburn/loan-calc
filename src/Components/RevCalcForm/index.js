@@ -3,20 +3,26 @@ import formula from '../helpers/calcHelpers';
 import { CalcForm } from '../ShortCalc/ShortCalc.styles';
 
 
-import {reverse} from '../helpers/calcHelpers'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+
+import { reverse } from '../helpers/calcHelpers';
 
 const RevCalcForm = (props) => {
   const [loanTerm, setLoanTerm] = useState(6);
   const [rate, setRate] = useState(175);
-  const[payment, setPayment] = useState(0);
+  const [payment, setPayment] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     props.setLoanDetails(reverse(payment, rate, loanTerm));
   };
 
   return (
-    <CalcForm>
+    <CalcForm onSubmit={(e) => handleSubmit(e)}>
+      
+      <FontAwesomeIcon icon={faQuestionCircle} className='tip'/> 
       <label htmlFor="payment">Monthly Payment</label>
       <span className="input-dollar">
         $
@@ -31,6 +37,7 @@ const RevCalcForm = (props) => {
 
       <input
         type="range"
+        defaultValue={'6'}
         min="3"
         max="6"
         step="1"
@@ -44,19 +51,18 @@ const RevCalcForm = (props) => {
         <option value="6" label="6 mo"></option>
       </datalist>
 
-        <div className="rate-input">
-          <label htmlFor="rate">APR</label>
-          <span className="input-percent">
-            <input
-              type="number"
-              onChange={(e) => setRate(Number(e.target.value))}
-              name="principle"
-            />
-            %
-          </span>
-        </div>
-        <button onClick={(e) => handleSubmit(e)}>Go!</button>
-     
+      <div className="rate-input">
+        <label htmlFor="rate">APR</label>
+        <span className="input-percent">
+          <input
+            type="number"
+            onChange={(e) => setRate(Number(e.target.value))}
+            name="principle"
+          />
+          %
+        </span>
+      </div>
+      <button type="submit">Go!</button>
     </CalcForm>
   );
 };

@@ -2,6 +2,10 @@ import { CalcWrapper, Wrapper } from '../LoanCalc/LoanCalc.styles';
 import ResultsPanel from '../ResultsPanel';
 import RevCalcForm from '../RevCalcForm';
 import ShortCalc from '../ShortCalc';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+
 export const ReverseCalc = (props) => {
   const { loanDetails, setLoanDetails } = props;
 
@@ -20,7 +24,7 @@ export const ReverseCalc = (props) => {
       </div>
       <CalcWrapper>
         <RevCalcForm setLoanDetails={setLoanDetails} />
-        <ResultsPanel loanDetails={loanDetails} />
+        <ResultsPanel type='reverse' loanDetails={loanDetails} />
       </CalcWrapper>
     </Wrapper>
   );

@@ -1,29 +1,39 @@
 import { ResultsWrapper } from './Results.styles';
 
 const ResultsPanel = (props) => {
-  const { loanDetails } = props;
-
-  let details={}
-  let main;
-  let title;
-  loanDetails.hasOwnProperty('monthlyPayment')
-    ? (details = {main: loanDetails.monthlyPayment, title: 'Monthly Payment'})
-    : (details = {main: loanDetails.principle, title: 'Loan Amount'});
+  const { loanDetails, type } = props;
 
   return (
     <ResultsWrapper>
       <div className="payment">
-        <p>{details.title}</p>
-        <p className="detail">${details.main}</p>
+        <p>{type === 'normal' ? 'Monthly Payment' : 'Loan Amount'}</p>
+        <p className="detail">
+          $
+          {type === 'normal'
+            ? loanDetails.monthlyPayment
+            : loanDetails.principle}
+        </p>
       </div>
-
+    <div className='bottom half'>
       <div className="interest">
-        <p>Interest and Fees: </p>
+        <p className='label'>Interest and Fees: </p>
         <p className="detail">${loanDetails.interest}</p>
       </div>
       <div className="total">
-        <p>Your Total Cost: </p>
+        <p className='label'>Your Total Cost: </p>
         <p className="detail">${loanDetails.totalCost}</p>
+      </div>
+      <div className="conditional">
+        <p className='label'>
+          {type == 'normal' ? 'Principle: ' : 'Monthly Payment: '}
+        </p>
+        <p className="detail">
+          $
+          {type === 'normal'
+            ? loanDetails.principle
+            : loanDetails.monthlyPayment.toFixed(2)}
+        </p>
+      </div>
       </div>
     </ResultsWrapper>
   );

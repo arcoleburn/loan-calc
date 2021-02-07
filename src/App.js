@@ -13,9 +13,10 @@ import { ReverseCalc } from './Components/ReverseCalc';
 
 function App() {
   const [loanDetails, setLoanDetails] = useState({
-    totalCost: 9375,
-    interest: 4375,
-    monthlyPayment: 1562.5,
+    totalCost: 0,
+    interest: 0,
+    monthlyPayment: 0,
+    principle: 0,
   });
 
   return (

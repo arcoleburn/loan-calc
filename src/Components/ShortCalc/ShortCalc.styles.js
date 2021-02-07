@@ -63,6 +63,10 @@ export const CalcForm = styled.form`
     }
   }
   
+  .tip{
+    align-self: flex-end;
+    position: absolute;
+  }
   
   
   datalist{

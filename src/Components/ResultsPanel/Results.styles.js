@@ -13,7 +13,7 @@ export const ResultsWrapper = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
-
+  justify-content: space-around;
   text-align: center;
 
   width: 700px;
@@ -24,16 +24,25 @@ export const ResultsWrapper = styled.div`
       font-size: var(--fontTiny);
     }
     .detail {
-      font-size: 2em;
+      font-size: var(--fontSuperBig);
       font-weight: bold;
     }
   }
 
   .interest,
-  .total {
+  .total, .conditional {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
+    .label{
+      font-size: var(--fontTiny)
+    }
+    p{
+      margin-bottom: 0;
+      font-size: var(--fontTiny)
+ 
+    }
   }
 `;
 
