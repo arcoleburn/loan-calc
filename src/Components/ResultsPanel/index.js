@@ -25,7 +25,7 @@ const ResultsPanel = (props) => {
       </div>
       <div className="conditional">
         <p className='label'>
-          {type == 'normal' ? 'Principle: ' : 'Monthly Payment: '}
+          {type === 'normal' ? 'Principle: ' : 'Monthly Payment: '}
         </p>
         <p className="detail">
           $

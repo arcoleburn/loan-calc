@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import formula from '../helpers/calcHelpers';
 import { CalcForm } from '../ShortCalc/ShortCalc.styles';
 
 
