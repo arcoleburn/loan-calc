@@ -13,7 +13,7 @@ export const Header = (props) => {
   <NavLinks>
     <Link to='/calculator'>Loan Calculator</Link>
     <Link to='/reverse'>Reverse Calculator</Link>
-    <Link t0='/'>About</Link>
+    <Link to='/'>About</Link>
   </NavLinks>
   </HeaderWrapper>);
 };

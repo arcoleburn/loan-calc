@@ -6,7 +6,7 @@ export const ResultsWrapper = styled.div`
   
   min-width: 217px;
   margin: 35px;
-  border: 1px solid black;
+  border: 1px solid var(--orange);
   background-color: white;
   border-radius: 6px;
   box-shadow: var(--lgShadow) 5px 5px 10px;
@@ -17,11 +17,21 @@ export const ResultsWrapper = styled.div`
   text-align: center;
 
   width: 700px;
+   
+   .seperator{
+     width: 70%;
+     height: 5px;
+     border-radius: 6px;
+     background-color: var(--green);
+     align-self: center;
+     margin-top: 0px;
+     
+   }
   .payment {
     margin: 0;
     p {
       margin: 0;
-      font-size: var(--fontTiny);
+      font-size: var(--fontSmall);
     }
     .detail {
       font-size: var(--fontSuperBig);
@@ -36,11 +46,11 @@ export const ResultsWrapper = styled.div`
     justify-content: space-between;
     
     .label{
-      font-size: var(--fontTiny)
+      font-size: var(--fontMed)
     }
     p{
-      margin-bottom: 0;
-      font-size: var(--fontTiny)
+      margin:0;
+      font-size: var(--fontMed)
  
     }
   }

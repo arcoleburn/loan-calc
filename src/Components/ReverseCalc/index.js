@@ -14,7 +14,7 @@ export const ReverseCalc = (props) => {
         <p>
           Input a comfortable monthly payment, select a term length,
           and input an interest rate. Hit the button, and the
-          calculator will tell you the amount of principle you can
+          calculator will tell you the amount of principal you can
           afford for a short term loan.
         </p>
         

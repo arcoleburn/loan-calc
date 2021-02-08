@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { reverse } from '../helpers/calcHelpers';
+import { ToolTip } from '../ToolTip';
 
 const RevCalcForm = (props) => {
   const [loanTerm, setLoanTerm] = useState(6);
@@ -21,7 +22,8 @@ const RevCalcForm = (props) => {
   return (
     <CalcForm onSubmit={(e) => handleSubmit(e)}>
       
-      <FontAwesomeIcon icon={faQuestionCircle} className='tip'/> 
+      <FontAwesomeIcon icon={faQuestionCircle} className='tip' data-tip
+        data-for="loantip"/> 
       <label htmlFor="payment">Monthly Payment</label>
       <span className="input-dollar">
         $
@@ -56,12 +58,13 @@ const RevCalcForm = (props) => {
           <input
             type="number"
             onChange={(e) => setRate(Number(e.target.value))}
-            name="principle"
+            name="principal"
           />
           %
         </span>
       </div>
       <button type="submit">Go!</button>
+    <ToolTip/>
     </CalcForm>
   );
 };

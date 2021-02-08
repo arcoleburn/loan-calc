@@ -9,12 +9,15 @@ export const CalcForm = styled.form`
   min-width: 248px;
   margin: 35px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--green);
   border-radius: 6px;
   box-shadow: var(--lgShadow) 5px 5px 10px;
 
   font-size: var(--fontMed);
 
+  label{
+    margin-top: 10px;
+  }
   input{
     border-radius: 6px;
     margin: 3px;

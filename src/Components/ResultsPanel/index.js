@@ -6,14 +6,15 @@ const ResultsPanel = (props) => {
   return (
     <ResultsWrapper>
       <div className="payment">
-        <p>{type === 'normal' ? 'Monthly Payment' : 'Loan Amount'}</p>
+        <p>{type === 'normal' ? 'Monthly Payment' : 'Principal'}</p>
         <p className="detail">
           $
           {type === 'normal'
             ? loanDetails.monthlyPayment
-            : loanDetails.principle}
+            : loanDetails.principal}
         </p>
       </div>
+      <div className='seperator'></div>
     <div className='bottom half'>
       <div className="interest">
         <p className='label'>Interest and Fees: </p>
@@ -25,13 +26,13 @@ const ResultsPanel = (props) => {
       </div>
       <div className="conditional">
         <p className='label'>
-          {type === 'normal' ? 'Principle: ' : 'Monthly Payment: '}
+          {type === 'normal' ? 'Principal: ' : 'Monthly Payment: '}
         </p>
         <p className="detail">
           $
           {type === 'normal'
-            ? loanDetails.principle
-            : loanDetails.monthlyPayment.toFixed(2)}
+            ? loanDetails.principal
+            : loanDetails.monthlyPayment}
         </p>
       </div>
       </div>
