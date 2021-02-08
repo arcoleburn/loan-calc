@@ -49,9 +49,9 @@ export const About = () => {
             target="_blank"
             className="emphasis"
           >
-            Github
+           {' '} Github
           </a>
-          , or checkout my
+          , or checkout my{' '}
           <a
             href="https://arcoleburn.com"
             target="_blank"
@@ -59,6 +59,10 @@ export const About = () => {
             className="emphasis"
           >
             portfolio.
+          </a>{' '}
+          If you'd like to get in touch, shoot me an{' '}
+          <a href="mailto: arcoleburn@gmail.com" className="emphasis">
+            email.
           </a>
         </p>
       </div>
