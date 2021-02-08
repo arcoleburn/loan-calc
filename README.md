@@ -12,4 +12,5 @@ Extras:
 ### To-Do List: 
 - Tests
 - Mobile Design 
+- Custom range selector
 - Extra features (Compound interest calculator, long-term loan calculator, pay-down visualizations)

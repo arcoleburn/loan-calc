@@ -12,7 +12,7 @@ export const LoanCalc = (props) => {
       <h3>Short Term Loan Calculator</h3>
       <p className='emphasize'>Need a short term loan?</p>
       <p>
-        Input your desired loan amount, select term length, and input
+        Input your desired loan amount, select a term length, and input
         an interest rate. Hit the button, and the calculator will tell you how much the loan will cost.
         </p>
       </div>

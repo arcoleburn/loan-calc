@@ -21,7 +21,7 @@ export const ToolTip = () => {
         APR, or Annual Percentage Rate, is essentially the "cost" of
         the loan on an annual basis. It takes into account all
         interest and fees you might owe. For example, if you take out
-        a $100 loan with a one year term at 10% APR, you will need to
+        a $100 loan with a one-year term at 10% APR, you will need to
         pay back a total of $110.
       </p>
     </ReactTooltip>
