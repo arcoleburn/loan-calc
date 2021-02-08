@@ -1,17 +1,17 @@
-// import './App.css';
-
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
+
 import { useState } from 'react';
-import { GlobalStyle } from './globalStyles';
 import { Header } from './Components/Header';
 import { Footer } from './Components/Footer';
 import { LoanCalc } from './Components/LoanCalc';
 import { ReverseCalc } from './Components/ReverseCalc';
 import { About } from './Components/About';
+
+import { GlobalStyle } from './globalStyles';
 
 function App() {
   const [loanDetails, setLoanDetails] = useState({

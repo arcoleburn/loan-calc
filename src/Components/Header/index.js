@@ -1,7 +1,9 @@
+import {Link} from 'react-router-dom'
+
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import { HeaderWrapper, NavLinks } from './header.styles';
-import {Link} from 'react-router-dom'
 
 
 export const Header = (props) => {
